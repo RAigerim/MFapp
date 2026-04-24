@@ -3,7 +3,7 @@
 mypython-*.json
 
 # Streamlit secrets - НЕ КОММИТИТЬ!
-.streamlit/secrets.toml
+.streamlitnotepad/secrets.toml
 
 # Python
 __pycache__/
