@@ -23,9 +23,10 @@ if not st.session_state.authenticated:
     
     password = st.text_input("Пароль:", type="password", key="password_input")
     
+    
     if st.button("🔓 Войти", type="primary", use_container_width=True):
         # ⚠️ ВАЖНО: Измените этот пароль на свой!
-        CORRECT_PASSWORD = "runningman2010"
+        CORRECT_PASSWORD = st.secrets["password"]["app_password"]
         
         if password == CORRECT_PASSWORD:
             st.session_state.authenticated = True
