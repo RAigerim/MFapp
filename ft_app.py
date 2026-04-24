@@ -23,7 +23,7 @@ if not st.session_state.authenticated:
     
     password = st.text_input("Пароль:", type="password", key="password_input")
     
-    
+
     if st.button("🔓 Войти", type="primary", use_container_width=True):
         # ⚠️ ВАЖНО: Измените этот пароль на свой!
         CORRECT_PASSWORD = st.secrets["password"]["app_password"]
@@ -38,25 +38,6 @@ if not st.session_state.authenticated:
     # st.markdown('</div>', unsafe_allow_html=True)
     # st.info("💡 Для изменения пароля отредактируйте переменную CORRECT_PASSWORD в коде")
     st.stop()
- 
-# ШАГ 2: Добавьте кнопку выхода в сайдбар
-# Этот код добавьте ПОСЛЕ строки st.title("💰 Finance Tracker")
-# и ПЕРЕД строкой spreadsheet = connect_gsheet()
- 
-with st.sidebar:
-    st.markdown("### 👤 Аккаунт")
-    st.markdown(f"**Статус:** Авторизован ✅")
-    
-    if st.button("🚪 Выйти", use_container_width=True):
-        st.session_state.authenticated = False
-        st.rerun()
-    
-    st.markdown("---")
-    st.markdown("### 📊 Навигация")
-    st.markdown("• **Аналитика** - просмотр отчетов")
-    st.markdown("• **Загрузка** - импорт выписок")
-    st.markdown("• **Данные** - редактирование")
-
 
 
 
